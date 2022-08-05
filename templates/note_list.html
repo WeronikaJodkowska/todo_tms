@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}TODO TMS{% endblock %}
+
+{% block content %}
+  <h1>Hello</h1>
+  {% for note in notes %}
+    {% include "note.html" %}
+  {% endfor %}
+  {% include "add_note.html" %}
+{% endblock %}

@@ -3,9 +3,16 @@
 {% block title %}TODO TMS{% endblock %}
 
 {% block content %}
-  <h1>Hello</h1>
-  {% for note in notes %}
-    {% include "note.html" %}
-  {% endfor %}
-  {% include "add_note.html" %}
+    <h1>Hello, {{ user }}</h1>
+    <div class="container text-center">
+        <div class="row">
+            {% for note in notes %}
+                <div class="col">
+                    {% include "note.html" %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% include "add_note.html" %}
+
 {% endblock %}
